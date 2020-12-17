@@ -1,0 +1,19 @@
+.descr{
+    height: 200px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+}
+.descr::-webkit-scrollbar {display: none;}
+
+.ArtistList{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 25px auto;
+}
+
+.FavIcon{
+    margin-bottom: 0px;
+}
+

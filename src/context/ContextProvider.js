@@ -17,15 +17,18 @@ const ContextProvider = (props) => {
           axios
           .get(_apiUrl)
           .then(data => {
+       
             setArtists(data.data.data);
             setLoading(false);
+            
           })
-      }
+      }   
+
 
       useEffect(() => {
         getData();
       }, []);
-
+  
       return (
           <MyContext.Provider value={{ artists, setArtists, loading, setLoading }}>
           { props.children }
