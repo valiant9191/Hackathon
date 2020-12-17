@@ -3,6 +3,7 @@ import { MyContext } from '../../context/ContextProvider';
 import PersonInfo from './person-card';
 
 import './PersonalPage.css';
+import Slider from './slider/Slider';
 
 const PersonalPage = () => {
 
@@ -24,6 +25,7 @@ const PersonalPage = () => {
                 artworks="https://www.mediastorehouse.com/pimage/497/13643908/13643908_450_450_81393_0_fill_0_a57bc85610830502a025d2676af7f23b.jpg"
             />
         }
+        <Slider/>
         </div>
     )
 }
