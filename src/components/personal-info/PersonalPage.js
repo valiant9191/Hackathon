@@ -64,12 +64,12 @@ const PersonalPage = () => {
             <Modal
                 isOpen={isOpen}
                 onRequestClose={toggleModal}
-                contentLabel="My dialog"
+                contentLabel="hire"
                 className="mymodal"
                 overlayClassName="myoverlay"
                 closeTimeoutMS={500}
             >
-                <div>My modal dialog.</div>
+                <div>Hire me</div>
                 <button onClick={toggleModal}>Close modal</button>
             </Modal>
         </div>
