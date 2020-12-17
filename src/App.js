@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { MyContext } from './context/ContextProvider';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Link } from 'react-router-dom';
 import SearchForm from './components/search-form'
 import './App.css';
 import AboutUs from './components/about-us';
