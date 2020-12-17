@@ -1,0 +1,11 @@
+.inner_wrap {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    padding: 1rem;
+    border: 1px solid grey;
+}
+
+.person_img img {
+    width: 100%;
+}

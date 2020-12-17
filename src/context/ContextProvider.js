@@ -10,6 +10,8 @@ const ContextProvider = (props) => {
 
     const [artists, setArtists] = useState('');
 
+    const [artist, setArtist] = useState('');
+
     const [loading, setLoading] = useState(false);
 
       const getData = () => {
