@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import './ModalForm.css'
 
-const ModalForm = () => {
+const ModalForm = ({ open, onClose }) => {
 
-    // const [modalIsOpen, setModalOpen] = useState(false)
+    if (!open) return null
+
+    // const [isOpen, setIsOpen] = useState(false)
+
+    // <ModalForm open={isOpen} onClose={() => setIsOpen(false)}> </ModalForm>
+    //         <button onClick={() => setIsOpen(true)}>Hire</button>
     
 
     return (
@@ -12,8 +17,7 @@ const ModalForm = () => {
         
         <div className="modal-wrapper">
             
-            {/* <ModalForm isOpen={modalIsOpen} />
-            <button onClick={() => setModalOpen(true)}>open modal</button> */}
+            <span onClick={onClose} className="close-modal-btn">x</span>
 
             <div className="modal-name">
                 <label 
@@ -63,7 +67,7 @@ const ModalForm = () => {
                     className="form-input-work"
                     type="text"
                     name="details"
-                    placeholder="A short description of work needed"
+                    // placeholder="A short description of work needed"
                 />
             </div>
 
@@ -75,7 +79,8 @@ const ModalForm = () => {
                 </button>
                 <button 
                     className="form-input-btn-back"
-                    type="submit">
+                    type="submit"
+                    onClick={onClose}>
                     Back
                 </button>
             </div>

@@ -6,7 +6,7 @@ export const MyContext = React.createContext();
 
 const ContextProvider = (props) => {
 
-    const _apiUrl = "https://openaccess-api.clevelandart.org/api/creators";
+    const _apiUrl = "https://openaccess-api.clevelandart.org/api/creators/?limit=10";
 
     const [artists, setArtists] = useState('');
 
@@ -17,15 +17,18 @@ const ContextProvider = (props) => {
           axios
           .get(_apiUrl)
           .then(data => {
+       
             setArtists(data.data.data);
             setLoading(false);
+            
           })
-      }
+      }   
+
 
       useEffect(() => {
         getData();
       }, []);
-
+  
       return (
           <MyContext.Provider value={{ artists, setArtists, loading, setLoading }}>
           { props.children }
