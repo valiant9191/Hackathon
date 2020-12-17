@@ -1,0 +1,123 @@
+.modal-wrapper {
+    margin: 100px auto;
+    width: 1000px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+    /* position: relative; */
+    border-radius: 10px;
+    height: 700px;
+    display: grid;
+    /* border: 1px solid black; */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 32px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; */
+}
+
+.modal-name {
+    /* margin-top: 100px; */
+    margin: 20px;
+    display: flex;
+    justify-content: flex-end;
+    /* border: 1px solid black; */
+}
+
+.modal-address {
+    margin: 20px;
+    display: flex;
+    justify-content: flex-end;
+    /* border: 1px solid black; */
+}
+
+.modal-work {
+    margin: 20px;
+    display: flex;
+    justify-content: flex-end;
+    /* border: 1px solid black; */
+}
+
+.modal-hire {
+    margin-left: 90px;
+}
+  
+.form-input-name {
+    margin-bottom: 0.5rem;
+    width: 60%;
+    height: 50px;
+}
+
+.form-input-address {
+    margin-bottom: 0.5rem;
+    width: 60%;
+    height: 50px;
+}
+
+.form-input-work {
+    margin-bottom: 0.5rem;
+    width: 60%;
+    height: 200px;
+}
+
+.form-input-number {
+    margin-bottom: 0.5rem;
+    /* width: 60%; */
+    /* height: 50px; */
+}
+
+.modal-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.form-input-btn-checkout {
+    width: 10%;
+    height: 50px;
+    margin: 10px;
+    border-radius: 2px;
+    background: linear-gradient(
+    90deg,
+    rgb(10, 161, 248) 0%,
+    rgba(12, 196, 199, 0.945) 100%
+    );
+  /* outline: none; */
+    border: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+.form-input-btn-back {
+    width: 10%;
+    height: 50px;
+    margin: 10px;
+    border-radius: 2px;
+    background: linear-gradient(
+    90deg,
+    rgb(10, 161, 248) 0%,
+    rgba(12, 196, 199, 0.945) 100%
+    );
+    /* outline: none; */
+    border: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+.form-input-btn-checkout:hover {
+    cursor: pointer;
+    background: linear-gradient(
+      90deg,
+      rgb(39, 143, 255) 0%,
+      rgb(12, 99, 250) 100%
+    );
+    transition: all 0.4s ease-out;
+}
+
+.form-input-btn-back:hover {
+    cursor: pointer;
+    background: linear-gradient(
+      90deg,
+      rgb(39, 143, 255) 0%,
+      rgb(12, 99, 250) 100%
+    );
+    transition: all 0.4s ease-out;
+}
