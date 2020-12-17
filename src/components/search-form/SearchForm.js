@@ -18,9 +18,7 @@ const SearchForm = () => {
 
     return (
         <div>
-        {/* {
-            !context.loading && aya.localeCompare(el => <h1>{el.title}</h1>)
-        } */}
+       <h1>Im search foarm component</h1>
         </div>
     )
 
