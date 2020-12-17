@@ -1,0 +1,10 @@
+.btn_wrap {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    margin: 2rem;
+}
+
+.btn_wrap button {
+    margin: 1rem;
+}

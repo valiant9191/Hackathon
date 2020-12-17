@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
 import { MyContext } from '../../context/ContextProvider';
+import ButtonWrap from './buttuns';
 import PersonInfo from './person-card';
 
 import './PersonalPage.css';
@@ -13,29 +14,27 @@ const PersonalPage = () => {
 
     const person = context.artists[0];
 
-    const [state, setState] = useState('');
-    const [loading, setLoading] = useState(false);
+    // const [state, setState] = useState('');
+    // const [loading, setLoading] = useState(false);
 
-    const getData = (name) => {
-        if(context.artists) {
-            axios
-        .get(`https://openaccess-api.clevelandart.org/api/artworks/?q=${name}&skip=2&limit=1&indent=1`)
-        .then(data => {
-            setState(data.data)
-            console.log(state)
-        })
-        }
-        
-    }
+    
+    // const getData = url => axios(url);
 
-    const isLoaded = () => context.artists ? getData(person.name) : null;
+    // //const isLoaded = () => context.artists ? getData(person.name) : null;
 
-    useEffect(() => {
-        isLoaded();
-    }, [state])
+    // useEffect(() => {
+    //     axios
+    //     .get(`https://openaccess-api.clevelandart.org/api/artworks/?q=${person.name}&skip=2&limit=1&indent=1`)
+    //     .then(data => {
+    //         setState(data.data)
+    //         console.log(state)
+    //     })
+    // }, [])
 
     return (
         <div className="peron-page_wrap">
+        
+        
         {
             context.artists && <PersonInfo
                 id={person.id}
@@ -47,7 +46,10 @@ const PersonalPage = () => {
                 artworks="https://www.mediastorehouse.com/pimage/497/13643908/13643908_450_450_81393_0_fill_0_a57bc85610830502a025d2676af7f23b.jpg"
             />
         }
+        <div className="slider_wrap">
         <Slider/>
+        <ButtonWrap/>
+        </div>
         </div>
     )
 }

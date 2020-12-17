@@ -1,7 +1,17 @@
+.peron-page_wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.person_wrap {
+    width: 40%;
+    margin-right: 4rem;
+}
+
 .inner_wrap {
     display: flex;
     flex-direction: column;
-    width: 35%;
+    width: 100%;
     padding: 1rem;
     border: 1px solid grey;
 }
