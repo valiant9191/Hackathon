@@ -5,14 +5,17 @@ import SearchForm from './components/search-form'
 import Home from './components/home';
 import './App.css';
 import AboutUs from './components/about-us';
+import NavBar from './components/nav-bar'
 
 function App() {
 
   //const context = useContext(MyContext);
 
 
-  return (
+  return (<div>
+    <NavBar />
     <Switch>
+      
       <Route exact path="/"
         render={props =>
           <Home {...props} />}
@@ -30,7 +33,7 @@ function App() {
           <Artist {...props} />}
        /> */}
     </Switch>
-
+    </div>
   );
 }
 
