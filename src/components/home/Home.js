@@ -1,8 +1,14 @@
 import SearchForm from "../search-form";
+import ArtistList from '../Artists/ArtistList';
 
 
 const Home = () => {
-    <SearchForm/>
+
+    return(
+        <ArtistList/>
+    )
+
+    
 }
 
 export default Home;
