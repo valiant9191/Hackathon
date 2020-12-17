@@ -6,8 +6,6 @@ import { MyContext } from '../../context/ContextProvider';
 
 const ArtistList = ()=>{
     
-
-
     const context = useContext(MyContext);
 
 console.log(context.artists)
@@ -29,7 +27,7 @@ console.log(newArr)
                          name={item.name}
                          descr={item.description}
                          bio={item.biography}
-                         header
+                         
                         
                          />
                         
