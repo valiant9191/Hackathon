@@ -1,4 +1,5 @@
 import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
 import './ButtonsWrap.css'
 
 const ButtonWrap = () => {
@@ -7,9 +8,12 @@ const ButtonWrap = () => {
       <Button variant="contained" color="primary">
         HIRE
     </Button>
-      <Button variant="contained" color="primary">
-        BACK
+      <Link to="/artists">
+        <Button variant="contained" color="primary">
+          BACK
     </Button>
+      </Link>
+
     </div>
   )
 }
