@@ -15,7 +15,6 @@ import './ArtistCard.css'
 const useStyles = makeStyles((theme) => ({
     root: {
       maxWidth: 345,
-      minWidth: 345
     },
     media: {
       height: 0,
@@ -46,7 +45,6 @@ const useStyles = makeStyles((theme) => ({
     
   }
     return (
-      <div className="single">
       <Card className={classes.root}>
         <CardHeader
          
@@ -74,6 +72,5 @@ const useStyles = makeStyles((theme) => ({
         </div> }
         
       </Card>
-      </div>
     );
   }
