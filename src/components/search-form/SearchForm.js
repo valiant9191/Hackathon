@@ -9,6 +9,7 @@ import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import Button from "@material-ui/core/Button";
 import ArtistsList from "../artists-list";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -98,6 +99,11 @@ const SearchForm = () => {
         <Button variant="contained" color="default" onClick={handleClick}>
           Find your artist
         </Button>
+        <Link to="/artists/artist">
+        <Button variant="contained" color="default">
+          Find ALL artist
+        </Button>
+        </Link>
         <ArtistsList filteredArtists={filteredArtists} />
       </div>
     </div>

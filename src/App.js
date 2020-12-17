@@ -5,7 +5,8 @@ import SearchForm from './components/search-form'
 import './App.css';
 import AboutUs from './components/about-us';
 import NavBar from './components/nav-bar'
-import Home from './components/home/Home'
+import Home from './components/home/Home';
+import Artists from './components/Artists/Artists'
 
 function App() {
 
@@ -28,10 +29,10 @@ function App() {
       render={props =>
           <AboutUs {...props} />}
        />
-       {/* <Route path="/artists/artist"
+       <Route path="/artists/artist"
       render={props =>
-          <Artist {...props} />}
-       /> */}
+          <Artists {...props} />}
+       />
     </Switch>
     </div>
   );
