@@ -1,6 +1,6 @@
 import AboutUs from "../about-us";
 import SearchForm from "../search-form";
-import ArtistList from '../Artists/ArtistList';
+import ArtistList from '../Artists(1)/ArtistList';
 import RandomArtist from "./random-artist"
 
 
