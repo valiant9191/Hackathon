@@ -1,4 +1,5 @@
-import React, { useContext, useEffect } from 'react';
+import axios from 'axios';
+import React, { useContext, useEffect, useState } from 'react';
 import { MyContext } from '../../context/ContextProvider';
 import PersonInfo from './person-card';
 
@@ -11,6 +12,27 @@ const PersonalPage = () => {
 
 
     const person = context.artists[0];
+
+    const [state, setState] = useState('');
+    const [loading, setLoading] = useState(false);
+
+    const getData = (name) => {
+        if(context.artists) {
+            axios
+        .get(`https://openaccess-api.clevelandart.org/api/artworks/?q=${name}&skip=2&limit=1&indent=1`)
+        .then(data => {
+            setState(data.data)
+            console.log(state)
+        })
+        }
+        
+    }
+
+    const isLoaded = () => context.artists ? getData(person.name) : null;
+
+    useEffect(() => {
+        isLoaded();
+    }, [state])
 
     return (
         <div className="peron-page_wrap">
