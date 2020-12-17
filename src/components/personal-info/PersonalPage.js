@@ -4,40 +4,44 @@ import { MyContext } from '../../context/ContextProvider';
 import ButtonWrap from './buttuns';
 import PersonInfo from './person-card';
 
-import './PersonalPage.css';
 import Slider from './slider/Slider';
+
+import './PersonalPage.css';
+
+import Modal from "react-modal";
+
+Modal.setAppElement("#root");
+
+
+
 
 const PersonalPage = () => {
 
     const context = useContext(MyContext);
 
-    const [state, setState] = useState('');
+    const [isOpen, setIsOpen] = useState(false);
 
-    const [name, setName] = useState('');
-
-    const person = context.artists[0];
-    
-
-    
-
-    const getData = () => {
-            axios
-                .get(`https://openaccess-api.clevelandart.org/api/artworks/?q=${person.name}&skip=2&limit=1&indent=1`)
-                .then(data => {
-                    setState(data.data)
-                    console.log(state)
-                })
+    const toggleModal = () => {
+        setIsOpen(!isOpen);
+        console.log('works')
     }
 
-    // if(context.artists) {
-    //     getData();
-    // }
+    //const [state, setState] = useState('');
 
-    //getData()
+    const person = context.artists[0];
+
+    // const getData = () => {
+    //         axios
+    //             .get(`https://openaccess-api.clevelandart.org/api/artworks/?q=${person.name}&skip=2&limit=1&indent=1`)
+    //             .then(data => {
+    //                 setState(data.data)
+    //                 console.log(state)
+    //             })
+    // }
 
     return (
         <div className="peron-page_wrap">
-        {context.artists && console.log(getData())}
+
 
 
             {
@@ -53,8 +57,21 @@ const PersonalPage = () => {
             }
             <div className="slider_wrap">
                 <Slider />
-                <ButtonWrap />
+                <ButtonWrap
+                    action={toggleModal}
+                />
             </div>
+            <Modal
+                isOpen={isOpen}
+                onRequestClose={toggleModal}
+                contentLabel="My dialog"
+                className="mymodal"
+                overlayClassName="myoverlay"
+                closeTimeoutMS={500}
+            >
+                <div>My modal dialog.</div>
+                <button onClick={toggleModal}>Close modal</button>
+            </Modal>
         </div>
     )
 }
