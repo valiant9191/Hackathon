@@ -3,6 +3,7 @@ import { MyContext } from './context/ContextProvider';
 //import { Route, Switch } from 'react-router-dom';
 //import SearchForm from './components/search-form'
 import './App.css';
+import ApiCall from './component/apiCall'
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
 
 
   return (
+
     <h1>
     Hello!
       {/* {context.artists && console.log(context.artists)} */}
@@ -32,6 +34,7 @@ function App() {
     //       <Artist {...props} />}
     //    />
     // </Switch>
+
   );
 }
 
