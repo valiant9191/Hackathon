@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './ModalForm.css'
+import StripeCheckoutButton from './payment';
 
 const ModalForm = ({ open, onClose }) => {
 
@@ -72,11 +73,13 @@ const ModalForm = ({ open, onClose }) => {
             </div>
 
             <div className="modal-btn">
-                <button 
+                <StripeCheckoutButton price="100 dinar"/>
+                
+                {/* <button 
                     className="form-input-btn-checkout"
                     type="submit">
                     Checkout
-                </button>
+                </button> */}
                 <button 
                     className="form-input-btn-back"
                     type="submit"
