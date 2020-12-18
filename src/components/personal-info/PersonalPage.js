@@ -51,6 +51,7 @@ const PersonalPage = () => {
             }
             <div className="slider_wrap">
                 <Slider />
+                <h1>$$ 100 $$ dinar per hour</h1>
                 <ButtonWrap
                     action={toggleModal}
                 />
