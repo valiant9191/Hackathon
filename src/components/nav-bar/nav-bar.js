@@ -28,6 +28,7 @@ const NavBar = () =>{
 
 
 return(
+
     <div>
            <nav className='Navbar'>
             <>
@@ -59,6 +60,7 @@ return(
 
     </nav>
         
+
     </div>
 )
 }
