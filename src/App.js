@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { MyContext } from './context/ContextProvider';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Link } from 'react-router-dom';
 import SearchForm from './components/search-form'
 import './App.css';
 import AboutUs from './components/about-us';
 import NavBar from './components/nav-bar'
 import Home from './components/home/Home'
-
+import Artists from './components/Artists/Artists'
 function App() {
 
   //const context = useContext(MyContext);
@@ -28,10 +28,10 @@ function App() {
       render={props =>
           <AboutUs {...props} />}
        />
-       {/* <Route path="/artists/artist"
+       <Route path="/artists/artist"
       render={props =>
-          <Artist {...props} />}
-       /> */}
+          <Artists {...props} />}
+       />
     </Switch>
     </div>
   );

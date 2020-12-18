@@ -8,6 +8,8 @@ import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import Button from "@material-ui/core/Button";
+import ArtistsList from "../artists-list";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,7 +32,8 @@ const SearchForm = () => {
   const context = useContext(MyContext);
   const [userInput, setUserInput] = React.useState("");
   const [userSelectTechnique, setUserSelectTechnique] = React.useState("");
-  const [artists, setArtists] = React.useState("");
+  const [artists, setArtists] = React.useState([]);
+  const [filteredArtists, setFilteredArtists] = React.useState([]);
 
   const handleChange = (event) => {
     setUserInput(event.target.value);
@@ -44,6 +47,8 @@ const SearchForm = () => {
 
     let filteredArtists = context.artists;
     filteredArtists = filterByName(filteredArtists);
+    console.log(filteredArtists)
+    setFilteredArtists(filteredArtists);
 
   };
 
@@ -66,8 +71,6 @@ const SearchForm = () => {
             variant="outlined"
             value={userInput}
             onChange={handleChange}
-
-
           />
         </div>
       </form>
@@ -96,6 +99,12 @@ const SearchForm = () => {
         <Button variant="contained" color="default" onClick={handleClick}>
           Find your artist
         </Button>
+        <Link to="/artists/artist">
+        <Button variant="contained" color="default">
+          Find ALL artist
+        </Button>
+        </Link>
+        <ArtistsList filteredArtists={filteredArtists} />
       </div>
     </div>
   );
