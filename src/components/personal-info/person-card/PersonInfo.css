@@ -6,6 +6,7 @@
 .person_wrap {
     width: 40%;
     margin-right: 4rem;
+    position:relative;
 }
 
 .inner_wrap {
@@ -19,3 +20,11 @@
 .person_img img {
     width: 100%;
 }
+
+@media screen and (max-width: 850px){
+    .peron-page_wrap{
+    display:none;
+    
+   }
+    
+  }

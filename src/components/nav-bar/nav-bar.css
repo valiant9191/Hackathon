@@ -1,40 +1,202 @@
-.navBar-container{
-    box-shadow: 5px 3px 20px 2px rgba(172, 13, 13, 0.1);
-    text-decoration-color: rgba(255, 255, 240, 0.123);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  
+  
+  nav{
+    display: flex;
+    justify-content: space-around;
+    min-height: 8vh;
+    
+    width: 100%;
+   align-items: center;
+    
+  }
+  
+  .logo{
+    display: flex;
+    color:rgb(209, 45, 100);
+    font-size: 40px;
+    
+   
+  }
+  
+  .logo i{
+    font-size: 70px;
+  }
+  
+  .logo h4{
+    margin-left: 20px;
+    letter-spacing: 3px;
+    padding-top: 10px;
+  }
+  
+  .navlinks {
+    display: flex;
     list-style: none;
     justify-content: space-around;
-    width: 100%;
+    width: 50%;
     font-size: 24px;
-    right: 0px;
+  }
+  
+  .link a{
+    color: rgb(231, 12, 85);
+  }
+  
+  .hamburger-toggle{
+    cursor: pointer;
+    color: rgb(231, 12, 85);
+    display: none;
+  }
+  
+  .hamburger-krestik{
+    cursor: pointer;
+    color: rgb(231, 12, 85);
+    display: none;
+  }
+  
+  .hamburger-krestik i{
+    font-size: 30px;
+  }
+  /* link begining */
+  link{
+    letter-spacing: 6px;
+    font-weight: bold;
+  
+  }
+  .link{
+    transition-property: all;
+    transition-duration: .6s;
+    transition-timing-function: ease;
+    
+  }
+  .link:hover,
+  .link:active {
+    letter-spacing: 3px;
+    transform:scale(1.1);
+    color: rgb(231, 12, 85);
+    border-radius: 2px;
+    padding:5px;
+    font-style: black;
+  }
+  
+  
+  
+  /* link ends */
+  .Navbar{
+    background-image: url('https://cdn1.savepice.ru/uploads/2020/12/18/76e22dd25b38792da9ff91db08c85ad3-full.jpg');
+    background-size: 100%;
+    background-position:center ;
+   background-repeat: no-repeat;
+   width: 100%;
+   height: 140px;
+  }
+  
+  .navMenu{
+    height: 140px;
+  }
+  
+  
+  @media screen and (max-width: 850px){
+  
+    body{
+      overflow-x: hidden;
+    }
+  
+    .logo{
+      font-size: 25px;
+    }
+  
+    .logo h4{
+      padding-top: 15px;
+    }
+  
+    .link a{
+      font-weight: 600;
+    }
+    
+    .hamburger-krestik{
+      display: block;
+      
+    }
+  
+  
+    .hamburger-toggle{
+      display: block;
+    }
+    .navlinks{
+      position: absolute;
+      right: 0px;
+      display: flex;
+      flex-direction: column;
+      height: 88vh;
+      align-items: center;
+      width: 100%;
+      top: 8vh;
+      background-color: rgb(36, 94, 117);
+      font-size: 32px;
+      margin-top: 64px;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+    }
+  
+    .active{
+      transform: translatex(0%);
+    }
+  }
+  
+  
+  @media screen and (max-width: 280px){
+    .logo i{
+      display: none;
+    }
+  }
+  
 
-    background: linear-gradient(185deg, #73ff5b5d, #ffffff, #ffe95b38);
-    background-size: 100% 100%;
-
-    -webkit-animation:  01s ease-in-out infinite;
-    -moz-animation:  01s ease-in-out infinite;
-    -o-animation:  01s ease-in-out infinite;
-    animation:  01s ease-in-out infinite;
-}
-
-@-webkit-keyframes AnimationName {
-    0%{background-position:0% 33%}
-    50%{background-position:100% 68%}
-    100%{background-position:0% 33%}
-}
-@-moz-keyframes AnimationName {
-    0%{background-position:0% 33%}
-    50%{background-position:100% 68%}
-    100%{background-position:0% 33%}
-}
-@-o-keyframes AnimationName {
-    0%{background-position:0% 33%}
-    50%{background-position:100% 68%}
-    100%{background-position:0% 33%}
-}
-@keyframes AnimationName {
-    0%{background-position:0% 33%}
-    50%{background-position:100% 68%}
-    100%{background-position:0% 33%}
-}
