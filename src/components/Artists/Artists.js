@@ -12,17 +12,19 @@ const Artists = (props) => {
     const pickArtist = (e) => {
 
         const idOfArtist = Number(e.target.id);
-        console.log(e.target.id)
+        console.log(e.target.id, 'target')
     
         const clickedArtist = context.artists.find(el => {
             return el.id === idOfArtist
         });
+
         setPerson(clickedArtist)
         console.log(person)
         props.history.push({
           pathname: '/person',
           person
         })
+        console.log(props.history.location.person)
       }
     return (
         <div>
