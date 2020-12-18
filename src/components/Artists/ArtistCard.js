@@ -48,7 +48,9 @@ const useStyles = makeStyles((theme) => ({
     
   }
     return (
-      <div className="single" id={props.id}>
+      <div 
+      onClick={(e) => props.onClick(e)}
+      className="single" id={props.id}>
       <Card className={classes.root}>
         <CardHeader
          
