@@ -2,7 +2,7 @@ import ArtistCard from './ArtistCard';
 import React, { useContext, useState } from 'react';
 import { MyContext } from '../../context/ContextProvider';
 
-
+import { pics } from './ArtistList';
 
 const Artists = (props) => {
     const context = useContext(MyContext);
@@ -31,6 +31,7 @@ const Artists = (props) => {
             {context.artists && context.artists.map((item, index)=>{
                     return(
                         <ArtistCard
+                        image={pics[index]}
                         onClick={pickArtist}
                         id={item.id}
                         key={index}

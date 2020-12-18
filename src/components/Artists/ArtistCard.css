@@ -52,3 +52,9 @@
   .creators {
       text-align: center;
   }
+
+  .makeStyles-media-9 {
+    height: 350px !important;
+    background-position: top !important;
+  }
+ 

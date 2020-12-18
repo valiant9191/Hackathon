@@ -59,7 +59,7 @@ export default function ArtistCard(props) {
         <CardMedia
           id={props.id}
           className={classes.media}
-          image="https://cdn1.savepice.ru/uploads/2020/12/17/547fe02a6cde4d7747db04ed87a45099-full.jpg"
+          image={props.image}
           title="Paella dish"
         />
         <CardContent className="descr" id={props.id}>
