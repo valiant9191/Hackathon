@@ -11,7 +11,7 @@ const dataForTeamCard = [
     },
     {inqusitor: 'Aya Berdyeva',
     photo:'https://i.imgur.com/x8pmhIp.jpg',
-    linkGithub: "https://github.com/Gabriellji",
+    linkGithub: "https://github.com/AyaDesigner",
     description: '',
     },
     {inqusitor: 'Viet Quoc Pham',
@@ -28,7 +28,7 @@ const dataForTeamCard = [
     },
      {inqusitor: 'Dima',
      photo:"https://i.imgur.com/U5nf5pt.jpg",
-     linkGithub: "https://github.com/Gabriellji",
+     linkGithub: "https://github.com/DzmitryPS",
      description: '',
     }
 ]
