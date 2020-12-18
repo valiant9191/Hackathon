@@ -4,7 +4,7 @@ import StripeCheckoutButton from './payment';
 
 const ModalForm = ({ open, onClose }) => {
 
-    if (!open) return null
+    // if (!open) return null
 
     // const [isOpen, setIsOpen] = useState(false)
 
@@ -14,11 +14,11 @@ const ModalForm = ({ open, onClose }) => {
 
     return (
 
-        
-        
         <div className="modal-wrapper">
             
-            <span onClick={onClose} className="close-modal-btn">x</span>
+            <span
+             onClick={() => onClose()} 
+             className="close-modal-btn">x</span>
 
             <div className="modal-name">
                 <label 
@@ -83,7 +83,8 @@ const ModalForm = ({ open, onClose }) => {
                 <button 
                     className="form-input-btn-back"
                     type="submit"
-                    onClick={onClose}>
+                    onClick={() => onClose()}
+                    >
                     Back
                 </button>
             </div>
