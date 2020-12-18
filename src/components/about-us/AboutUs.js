@@ -9,7 +9,7 @@ const dataTeam = dataForTeamCard;
 const AboutUs = () => {
     return(
     <div className='about'>    
-        <h1>Im About Us</h1>
+        <h1 className='aboutArt'>Wild Art Agency</h1>
         <div className='dataTeam'>
             {dataTeam.map((el,index)=>(<TeamCard  
                 key={index}
