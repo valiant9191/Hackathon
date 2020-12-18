@@ -13,19 +13,11 @@ import ModalForm from './modal-form';
 
 Modal.setAppElement("#root");
 
-
-
-
 const PersonalPage = () => {
 
-     const [isOpen, setIsOpen] = useState(false)
-
-    // <ModalForm open={isOpen} onClose={() => setIsOpen(false)}> </ModalForm>
-    //         <button onClick={() => setIsOpen(true)}>Hire</button>
+    const [isOpen, setIsOpen] = useState(false)
 
     const context = useContext(MyContext);
-
-    // const [isOpen, setIsOpen] = useState(false);
 
     const toggleModal = () => {
         setIsOpen(!isOpen);
@@ -58,13 +50,25 @@ const PersonalPage = () => {
                 />
             }
             <div className="slider_wrap">
+            <h1>See examples of work</h1>
                 <Slider />
+                <h1>$$ 100 $$ dinar per hour</h1>
                 <ButtonWrap
                     action={toggleModal}
                 />
             </div>
-             <ModalForm
-              open={isOpen} onClose={() => setIsOpen(false)}> </ModalForm>
+            <Modal
+                isOpen={isOpen}
+                onRequestClose={toggleModal}
+                contentLabel="My dialog"
+                className="mymodal"
+                overlayClassName="myoverlay"
+                closeTimeoutMS={500}
+            >
+                <ModalForm onClose={toggleModal}>
+                    <button onClick={toggleModal}>Close modal</button>
+                </ModalForm>
+            </Modal>
         </div>
     )
 }

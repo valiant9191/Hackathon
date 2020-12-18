@@ -12,9 +12,20 @@
 
 .ArtistList{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     margin: 25px auto;
+}
+
+.single .makeStyles-root-1 {
+    min-height: unset!important;
+}
+.single .MuiCardContent-root {
+    display: none;
+}
+
+.single .makeStyles-root-8 {
+    min-height: unset!important;
 }
 
 .FavIcon{
@@ -25,16 +36,19 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     height: 100%;
     z-index: 10;
+    transition: all .25s ease-in-out;
 
 }
 
 .single:hover {
-    transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
+    transform: scale(1.1);
+    transform: scale(1.1);
   }
 
   .isFavorite{
       color:red
+  }
+
+  .creators {
+      text-align: center;
   }

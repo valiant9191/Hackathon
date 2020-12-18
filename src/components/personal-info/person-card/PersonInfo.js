@@ -8,8 +8,8 @@ const PersonInfo = ({id, name, nationality, description, biography, birth_year, 
                     <img src={artworks} alt={name}/>
                 </div>
                 <div className="person-description">
-                   <p className="descrip">{nationality}</p>
-                   <p className="descrip">{description}</p>
+                   <h4 className="descrip">{nationality}</h4>
+                   <h1 className="descrip">{description}</h1>
                    <p className="descrip">{biography}</p>
                    <p className="descrip">{birth_year}</p>
                 </div>

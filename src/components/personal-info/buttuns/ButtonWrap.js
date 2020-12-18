@@ -10,7 +10,7 @@ const ButtonWrap = ({ action }) => {
        >
        HIRE
     </button>
-      <Link to="/artists">
+      <Link to="/artists/artist">
         <Button variant="contained" color="primary">
           BACK
     </Button>
