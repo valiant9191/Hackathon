@@ -1,7 +1,9 @@
 # Wild Art Agency 
 
 ![N|Solid](https://cdn1.savepice.ru/uploads/2020/12/18/42c649d30568c49335ffc92e15d8818c-full.png)
-
+This is a Hackathon peoject of 24 hours.
+We tried to help people from another time, now they can find any artist from our database and order a new fresque from Leonardo
+or a portrait of their fmaily!
 
 
 
