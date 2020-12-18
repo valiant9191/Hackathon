@@ -12,11 +12,11 @@ const NavBar = () =>{
 
 
 return(
-    <div>
+    <div className='navBar-container'>
 
         <img />
-        <button> <Link to='/'>Home </Link></button>
-        <button> <Link to='/about'>About</Link></button>
+        <li> <Link  to='/'>Home </Link></li>
+        <li> <Link  to='/about'>About</Link></li>
     </div>
 )
 }
