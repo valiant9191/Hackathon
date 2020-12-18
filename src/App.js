@@ -7,6 +7,7 @@ import AboutUs from './components/about-us';
 import NavBar from './components/nav-bar'
 import Home from './components/home/Home'
 import Artists from './components/Artists/Artists'
+import PersonalPage from './components/personal-info/PersonalPage'
 function App() {
 
   //const context = useContext(MyContext);
@@ -20,10 +21,10 @@ function App() {
         render={props =>
           <Home {...props} />}
       />
-      {/* <Route path="/artists"
+      <Route path="/person"
         render={props =>
-          <ArtistList {...props} />}
-      /> */}
+          <PersonalPage {...props} />}
+      />
       <Route path="/about"
       render={props =>
           <AboutUs {...props} />}

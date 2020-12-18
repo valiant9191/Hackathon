@@ -23,6 +23,7 @@ const ArtistList = () => {
                     return (
 
                         <ArtistCard
+                        id={item.id}
                             key={index}
                             name={item.name}
                             descr={item.description}
