@@ -99,32 +99,64 @@ const SearchForm = () => {
   }, []);
 
   return (
-
     <div>
-
       <Typography className="heading-one" variant="h3" component="h2" gutterBottom>
         Find your artist!
-      </Typography>      <FormGroup className="inputs-fileds" row>
+      </Typography>     
 
-        <form className={classes.root} noValidate autoComplete="off">
-          <div>
-            <TextField
-              id="outlined-search"
-              label="Artist name"
-              type="search"
-              variant="outlined"
-              value={userInput}
-              onChange={handleChange}
-            />
-          </div>
-        </form>
+        <div className="form_wrap">
+          <form className={classes.root} noValidate autoComplete="off">
 
-    <div className="form_wrap">
-      <form className={classes.root} noValidate autoComplete="off">
+            <div>
+              <FormGroup className="filters-fileds" row>
 
-        <div>
-          <FormGroup className="filters-fileds" row>
+                <FormControl variant="outlined" className={classes.formControl}>
+                  <InputLabel id="demo-simple-select-outlined-label">
+                    Technique
+          </InputLabel>
+                  <Select
+                    labelId="demo-simple-select-outlined-label"
+                    id="demo-simple-select-outlined"
+                    value={userSelectTechnique}
+                    onChange={handleSelectTechnique}
+                    label="Technique"
+                  >
+                    <MenuItem value="">
+                    </MenuItem>
+                    {techniques.map(technique => <MenuItem value={technique}>{technique}</MenuItem>)}
 
+                  </Select>
+                </FormControl>
+              </FormGroup>
+
+            </div>
+
+            <div>
+              <FormControl variant="outlined" className={classes.formControl}>
+                <InputLabel id="demo-simple-select-outlined-label">
+                  Nationality
+          </InputLabel>
+                <Select
+                  labelId="demo-simple-select-outlined-label"
+                  id="demo-simple-select-outlined"
+                  value={userSelectNationality}
+                  onChange={handleSelectNationality}
+                  label="Nationality"
+                >
+                  <MenuItem value="">
+                  </MenuItem>
+                  {nationalities.map(nationality => <MenuItem value={nationality}>{nationality}</MenuItem>)}
+
+                </Select>
+              </FormControl>
+    
+            </div>
+      {/* </FormGroup> */}
+      </form>
+      </div>
+
+          <div className="search-button">
+          <div className="form-btn_wrap">
             <FormControl variant="outlined" className={classes.formControl}>
               <InputLabel id="demo-simple-select-outlined-label">
                 Technique
@@ -134,82 +166,35 @@ const SearchForm = () => {
                 id="demo-simple-select-outlined"
                 value={userSelectTechnique}
                 onChange={handleSelectTechnique}
-                label="Technique"
+                label="Age"
               >
                 <MenuItem value="">
+                  <em>None</em>
                 </MenuItem>
-                {techniques.map(technique => <MenuItem value={technique}>{technique}</MenuItem>)}
-
+                <MenuItem value={10}>Ten</MenuItem>
+                <MenuItem value={20}>Twenty</MenuItem>
+                <MenuItem value={30}>Thirty</MenuItem>
               </Select>
             </FormControl>
-          </FormGroup>
+          </div>
+          <div className="form-button_wrap">
+            <div className="search-btn_wrap">
 
-        </div>
-
-        <div>
-          <FormControl variant="outlined" className={classes.formControl}>
-            <InputLabel id="demo-simple-select-outlined-label">
-              Nationality
-          </InputLabel>
-            <Select
-              labelId="demo-simple-select-outlined-label"
-              id="demo-simple-select-outlined"
-              value={userSelectNationality}
-              onChange={handleSelectNationality}
-              label="Nationality"
-            >
-              <MenuItem value="">
-              </MenuItem>
-              {nationalities.map(nationality => <MenuItem value={nationality}>{nationality}</MenuItem>)}
-
-            </Select>
-          </FormControl>
-
-        </div>
-      </FormGroup>
-
-      <div className="search-button">
-
-      </form>
-      <div className="form-btn_wrap">
-        <FormControl variant="outlined" className={classes.formControl}>
-          <InputLabel id="demo-simple-select-outlined-label">
-            Technique
-          </InputLabel>
-          <Select
-            labelId="demo-simple-select-outlined-label"
-            id="demo-simple-select-outlined"
-            value={userSelectTechnique}
-            onChange={handleSelectTechnique}
-            label="Age"
-          >
-            <MenuItem value="">
-              <em>None</em>
-            </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
-          </Select>
-        </FormControl>
-      </div>
-      <div className="form-button_wrap">
-      <div className="search-btn_wrap">
-
-        <Button variant="contained" color="default" onClick={handleClick}>
-          Find your artist
+              <Button variant="contained" color="default" onClick={handleClick}>
+                Find your artist
         </Button>
-        <Link to="/artists/artist">
-          <Button variant="contained" color="default">
-            Browse all
+              <Link to="/artists/artist">
+                <Button variant="contained" color="default">
+                  Browse all
         </Button>
-        </Link>
+              </Link>
+            </div>
+            <ArtistsList filteredArtists={filteredArtists} />
+
+          </div>
+
+</div>
         </div>
-        <ArtistsList filteredArtists={filteredArtists} />
-
-      </div>
-
-
-    </div>
   );
 };
 
