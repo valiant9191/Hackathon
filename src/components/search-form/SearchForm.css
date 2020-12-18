@@ -1,3 +1,30 @@
+
+
+
+.filters-fileds {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.inputs-fileds {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .heading-one{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+=======
 .form_wrap {
     width: 100%;
     display: flex;
@@ -26,3 +53,4 @@
     display: flex;
     justify-content: center;
 }
+
