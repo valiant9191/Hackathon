@@ -14,3 +14,8 @@ margin-top: 2%;
     margin: 2%;
     min-width: 25%;
 }
+
+.aboutArt{
+    display: flex;
+justify-content: center;
+}
