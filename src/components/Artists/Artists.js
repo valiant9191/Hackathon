@@ -27,6 +27,7 @@ const Artists = (props) => {
     return (
         <div>
             <div className= "ArtistList">
+            
             {context.artists && context.artists.map((item, index)=>{
                     return(
                         <ArtistCard

@@ -61,7 +61,7 @@ const SearchForm = () => {
   }, []);
 
   return (
-    <div>
+    <div className="form_wrap">
       <form className={classes.root} noValidate autoComplete="off">
         <div>
           <TextField
@@ -74,7 +74,7 @@ const SearchForm = () => {
           />
         </div>
       </form>
-      <div>
+      <div className="form-btn_wrap">
         <FormControl variant="outlined" className={classes.formControl}>
           <InputLabel id="demo-simple-select-outlined-label">
             Technique
@@ -95,7 +95,8 @@ const SearchForm = () => {
           </Select>
         </FormControl>
       </div>
-      <div>
+      <div className="form-button_wrap">
+      <div className="search-btn_wrap">
         <Button variant="contained" color="default" onClick={handleClick}>
           Find your artist
         </Button>
@@ -104,6 +105,7 @@ const SearchForm = () => {
           Find ALL artist
         </Button>
         </Link>
+        </div>
         <ArtistsList filteredArtists={filteredArtists} />
       </div>
     </div>
