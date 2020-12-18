@@ -1,0 +1,16 @@
+.about{
+    background-image: url(https://i.gifer.com/9lZ7.gif);
+/* background-size: cover; */
+height:110%;
+flex-wrap: wrap;
+}
+.dataTeam{
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+margin-top: 2%;
+}
+.MuiPaper-root{
+    margin: 2%;
+    min-width: 25%;
+}

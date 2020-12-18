@@ -8,11 +8,17 @@ const dataTeam = dataForTeamCard;
 
 const AboutUs = () => {
     return(
-    <div>
+    <div className='about'>    
         <h1>Im About Us</h1>
-        {dataTeam.map((el)=>(<TeamCard  
-            title={el.name}
-        />))}
+        <div className='dataTeam'>
+            {dataTeam.map((el,index)=>(<TeamCard  
+                key={index}
+                name={el.inqusitor}
+                linkGithub={el.linkGithub}
+                // description={el.description}
+                photo={el.photo}
+            />))}
+        </div>
     </div>
     )
 }

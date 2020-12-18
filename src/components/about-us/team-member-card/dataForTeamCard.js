@@ -1,33 +1,33 @@
-import React from 'react';
+
 
 
 
 
 const dataForTeamCard = [
     {inqusitor: 'Gabriellji',
-     photo:'src\components\about-us\team-member-card\srcphotos\PhotoFunia-Gabriell.jpg',
+     photo:'https://i.imgur.com/N9g8btI.jpg',
      linkGithub: "https://github.com/Gabriellji",
      description: '',
     },
     {inqusitor: 'Aya Berdyeva',
-    photo:'src\components\about-us\team-member-card\srcphotos\PhotoFunia-Aya.jpg',
+    photo:'https://i.imgur.com/x8pmhIp.jpg',
     linkGithub: "https://github.com/Gabriellji",
     description: '',
     },
     {inqusitor: 'Viet Quoc Pham',
-    photo:'src\components\about-us\team-member-card\srcphotos\PhotoFunia-Viet.jpg',
+    photo:'https://i.imgur.com/R3q5bn1.jpg',
     linkGithub: "https://github.com/VietQuoc356",
     description: '',
     },
 
     {inqusitor: 'Valentin Kolko',
-    photo:'src\components\about-us\team-member-card\srcphotos\PhotoFunia-1608229689.jpg',
+    photo:'https://i.imgur.com/0HCsAlc.jpg',
     linkGithub: "https://github.com/valiant9191",
     description: '',
     
     },
      {inqusitor: 'Dima',
-     photo:'',
+     photo:"https://i.imgur.com/U5nf5pt.jpg",
      linkGithub: "https://github.com/Gabriellji",
      description: '',
     }
