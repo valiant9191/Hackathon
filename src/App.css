@@ -3,4 +3,10 @@
     flex-direction: column;
     align-items: center;
     padding: 3rem;
+    background-image: url('https://cdn1.savepice.ru/uploads/2020/12/18/01697cdd550104863bd6395eb65e1d1d-full.png');
+    background-size: 100%;
+    background-position:center ;
+   background-repeat: no-repeat;
+   width: 100%;
+   
 }

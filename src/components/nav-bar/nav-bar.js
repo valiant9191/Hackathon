@@ -5,7 +5,9 @@ import React, {useState} from 'react';
 
 
 
-
+let style={
+color: 'white'
+}
 
 const NavBar = () =>{
 
@@ -34,7 +36,7 @@ return(
             <>
           <div className='logo'>
           <i class="fas fa-palette"></i>
-            <h4><Link to='/' className="link">Wild Art Agency</Link></h4>
+            <h4><Link to='/' className="link" style={style}>Wild Art Agency</Link></h4>
             </div>
             <ul className={renderClasses()}>
             <li className="link"> <Link to='/'>Home </Link></li>

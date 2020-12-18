@@ -21,7 +21,7 @@
   }
   
   .App-header {
-    background-color: #282c34;
+    background-color: white;
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -62,7 +62,7 @@
   
   .logo{
     display: flex;
-    color:rgb(209, 45, 100);
+    color: white;
     font-size: 40px;
     
    
@@ -76,30 +76,32 @@
     margin-left: 20px;
     letter-spacing: 3px;
     padding-top: 10px;
+    
   }
   
   .navlinks {
     display: flex;
     list-style: none;
-    justify-content: space-around;
+    justify-content: flex-end;
     width: 50%;
     font-size: 24px;
   }
   
   .link a{
-    color: rgb(231, 12, 85);
+    color: white;
+    margin: auto 20px;
   
   }
   
   .hamburger-toggle{
     cursor: pointer;
-    color: rgb(231, 12, 85);
+    color: white;
     display: none;
   }
   
   .hamburger-krestik{
     cursor: pointer;
-    color: rgb(231, 12, 85);
+    color: white;
     display: none;
   }
   
@@ -122,7 +124,7 @@
   .link:active {
     letter-spacing: 3px;
     transform:scale(1.1);
-    color: rgb(231, 12, 85);
+    background-color: rgba(106, 111, 155, 0.3);
     border-radius: 2px;
     padding:5px;
     font-style: black;
@@ -132,7 +134,7 @@
   
   /* link ends */
   .Navbar{
-    background-image: url('https://cdn1.savepice.ru/uploads/2020/12/18/76e22dd25b38792da9ff91db08c85ad3-full.jpg');
+    background-image: url('https://cdn1.savepice.ru/uploads/2020/12/18/6148ed18ce9dcc140ce221008ef4ff03-full.jpg');
     background-size: 100%;
     background-position:center ;
    background-repeat: no-repeat;
@@ -181,7 +183,7 @@
       align-items: center;
       width: 100%;
       top: 8vh;
-      background-color: rgb(36, 94, 117);
+      background-color: rgba(106, 111, 155, 0.3);
       font-size: 32px;
       margin-top: 64px;
       transform: translateX(100%);
