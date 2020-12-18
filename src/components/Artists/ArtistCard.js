@@ -48,20 +48,23 @@ const useStyles = makeStyles((theme) => ({
     
   }
     return (
-      <div className="single">
-      <Card className={classes.root}>
+      <div 
+      onClick={(e) => props.onClick(e)}
+      className="single" id={props.id}>
+      <Card className={classes.root} id={props.id}>
         <CardHeader
-         
+         id={props.id}
           title={props.name}
           subheader={props.descr}
         />
         <CardMedia
+        id={props.id}
           className={classes.media}
           image= "https://cdn1.savepice.ru/uploads/2020/12/17/547fe02a6cde4d7747db04ed87a45099-full.jpg"
           title="Paella dish"
         />
-        <CardContent className="descr">
-          <Typography variant="body2" color="textSecondary" component="p">
+        <CardContent className="descr" id={props.id}>
+          <Typography variant="body2" color="textSecondary" component="p" id={props.id}>
               {props.bio}
            
           </Typography>
