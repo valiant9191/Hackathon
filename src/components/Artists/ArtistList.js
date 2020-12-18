@@ -27,8 +27,7 @@ const ArtistList = () => {
                             name={item.name}
                             descr={item.description}
                             bio={item.biography}
-
-
+                            
                         />
 
                     )
