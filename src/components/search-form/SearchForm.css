@@ -24,10 +24,10 @@
     align-items: center;
     justify-content: center;
   }
- #button{
+ #button {
       margin: 10px;
   }
-=======
+
 .form_wrap {
     width: 100%;
     display: flex;

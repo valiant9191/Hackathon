@@ -121,11 +121,11 @@ const SearchForm = () => {
         </FormGroup>
       </div>
       <div className="search-button">
-      <Button variant="contained" color="default" onClick={handleClick}>
+      <Button id="button" variant="contained" color="secondary" onClick={handleClick}>
         Find your artist
       </Button>
       <Link to="/artists/artist">
-        <Button variant="contained" color="default">
+        <Button variant="contained" color="secondary">
           Browse all
       </Button>
       </Link>
