@@ -1,8 +1,12 @@
+*{
+    box-sizing: border-box;
+}
 .descr{
     height: 200px;
     -ms-overflow-style: none;
     scrollbar-width: none;
     overflow-y: scroll;
+    
 }
 .descr::-webkit-scrollbar {display: none;}
 
@@ -16,4 +20,20 @@
 .FavIcon{
     margin-bottom: 0px;
 }
+.single{
+    margin: 20px 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    height: 100%;
 
+}
+
+.single:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  .isFavorite{
+      color:red
+  }

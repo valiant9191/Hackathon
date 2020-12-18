@@ -15,6 +15,9 @@ import './ArtistCard.css'
 const useStyles = makeStyles((theme) => ({
     root: {
       maxWidth: 345,
+      minWidth: 345,
+      maxHeight: 570,
+      minHeight: 570
     },
     media: {
       height: 0,
@@ -45,6 +48,7 @@ const useStyles = makeStyles((theme) => ({
     
   }
     return (
+      <div className="single">
       <Card className={classes.root}>
         <CardHeader
          
@@ -65,12 +69,13 @@ const useStyles = makeStyles((theme) => ({
          {props.header && 
         <div className="FavIcon">
         <CardActions disableSpacing>
-          <IconButton aria-label="add to favorites" onClick={addToFav} className={isFavorite ? "isFavorite" : "notFavorite"}>
-            <FavoriteIcon />
-          </IconButton>
+          <IconButton aria-label="add to favorites">
+            <FavoriteIcon onClick={addToFav} className={isFavorite ? "isFavorite" : "notFavorite"} />
+          </IconButton>  
         </CardActions>
         </div> }
         
       </Card>
+      </div>
     );
   }

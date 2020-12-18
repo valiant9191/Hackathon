@@ -1,0 +1,30 @@
+.peron-page_wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.person_wrap {
+    width: 40%;
+    margin-right: 4rem;
+    position:relative;
+}
+
+.inner_wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid grey;
+}
+
+.person_img img {
+    width: 100%;
+}
+
+@media screen and (max-width: 850px){
+    .peron-page_wrap{
+    display:none;
+    
+   }
+    
+  }
