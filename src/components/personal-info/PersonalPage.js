@@ -33,7 +33,7 @@ const PersonalPage = (props) => {
 
     //const [state, setState] = useState('');
 
-    const person = context.artists[0];
+    //const person = context.artists[0];
 
     // const getData = () => {
     //         axios
@@ -51,12 +51,12 @@ const PersonalPage = (props) => {
 
             {
                 context.artists && <PersonInfo
-                    id={person.id}
-                    name={person.name}
-                    nationality={person.nationality}
-                    description={person.description}
-                    biography={person.biography}
-                    birth_year={person.birth_year}
+                    id={props.location.person.id}
+                    name={props.location.person.name}
+                    nationality={props.location.person.nationality}
+                    description={props.location.person.description}
+                    biography={props.location.person.biography}
+                    birth_year={props.location.person.birth_year}
                     artworks="https://www.mediastorehouse.com/pimage/497/13643908/13643908_450_450_81393_0_fill_0_a57bc85610830502a025d2676af7f23b.jpg"
                 />
             }
