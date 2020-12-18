@@ -48,3 +48,7 @@
   .isFavorite{
       color:red
   }
+
+  .creators {
+      text-align: center;
+  }

@@ -14,9 +14,15 @@
 .form-button_wrap {
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
 }
 
 .form-button_wrap a {
     display: flex;
     margin-left: 1rem;
+}
+
+.search-btn_wrap {
+    display: flex;
+    justify-content: center;
 }

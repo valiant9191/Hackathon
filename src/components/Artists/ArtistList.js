@@ -8,8 +8,6 @@ const ArtistList = () => {
 
     const context = useContext(MyContext);
 
-    console.log(context.artists)
-
 
     let newArr = [];
     newArr.push(context.artists[0], context.artists[1], context.artists[2], context.artists[3])
@@ -17,8 +15,8 @@ const ArtistList = () => {
 
     return (
         <div>
+                <h1 className="creators">Creators of the week!</h1>
             <div className="ArtistList">
-
                 {context.artists && newArr.map((item, index) => {
                     return (
                         <ArtistCard

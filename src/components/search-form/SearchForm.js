@@ -96,6 +96,7 @@ const SearchForm = () => {
         </FormControl>
       </div>
       <div className="form-button_wrap">
+      <div className="search-btn_wrap">
         <Button variant="contained" color="default" onClick={handleClick}>
           Find your artist
         </Button>
@@ -104,6 +105,7 @@ const SearchForm = () => {
           Find ALL artist
         </Button>
         </Link>
+        </div>
         <ArtistsList filteredArtists={filteredArtists} />
       </div>
     </div>
