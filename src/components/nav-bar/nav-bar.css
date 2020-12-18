@@ -1,0 +1,40 @@
+.navBar-container{
+    box-shadow: 5px 3px 20px 2px rgba(172, 13, 13, 0.1);
+    text-decoration-color: rgba(255, 255, 240, 0.123);
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 24px;
+    right: 0px;
+
+    background: linear-gradient(185deg, #73ff5b5d, #ffffff, #ffe95b38);
+    background-size: 100% 100%;
+
+    -webkit-animation:  01s ease-in-out infinite;
+    -moz-animation:  01s ease-in-out infinite;
+    -o-animation:  01s ease-in-out infinite;
+    animation:  01s ease-in-out infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 33%}
+    50%{background-position:100% 68%}
+    100%{background-position:0% 33%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 33%}
+    50%{background-position:100% 68%}
+    100%{background-position:0% 33%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 33%}
+    50%{background-position:100% 68%}
+    100%{background-position:0% 33%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 33%}
+    50%{background-position:100% 68%}
+    100%{background-position:0% 33%}
+}
