@@ -50,6 +50,7 @@ const PersonalPage = () => {
                 />
             }
             <div className="slider_wrap">
+            <h1>See examples of work</h1>
                 <Slider />
                 <h1>$$ 100 $$ dinar per hour</h1>
                 <ButtonWrap

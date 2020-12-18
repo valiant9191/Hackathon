@@ -42,3 +42,7 @@
   .ReactModal__Overlay--before-close {
     opacity: 0;
   }
+
+  .slider_wrap h1 {
+      margin: 1rem 0;
+  }
