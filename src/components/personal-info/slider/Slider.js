@@ -1,14 +1,12 @@
 import Carousel from 'react-elastic-carousel'
 
-const Item = ({img}) => {
+const Item = () => {
     return (
         <div>
-            <img src={img} alt="lala"/>
+            <img src="https://media.timeout.com/images/103166737/750/422/image.jpg" alt="lala"/>
         </div>
     )
 }
-
-const array = ["https://media.timeout.com/images/103166737/750/422/image.jpg", "https://www.bocadolobo.com/blog/wp-content/uploads/2020/10/Some-of-The-Most-Famous-Artists-Of-All-Time-13.jpg", "https://www.bocadolobo.com/blog/wp-content/uploads/2020/10/Some-of-The-Most-Famous-Artists-Of-All-Time-13.jpg" ]
 
 const Item1 = () => {
     return (
@@ -21,7 +19,29 @@ const Item1 = () => {
 const Item2 = () => {
     return (
         <div>
-            <img src="https://www.bocadolobo.com/blog/wp-content/uploads/2020/10/Some-of-The-Most-Famous-Artists-Of-All-Time-13.jpg" alt="lala"/>
+            <img src="https://media.timeout.com/images/103166739/750/422/image.jpg" alt="lala"/>
+        </div>
+    )
+}
+
+const Item3 = () => {
+    return (
+        <div>
+            <img src="https://media.timeout.com/images/105293264/750/422/image.jpg" alt="lala"/>
+        </div>
+    )
+}
+const Item4 = () => {
+    return (
+        <div>
+            <img src="https://media.timeout.com/images/103166750/750/422/image.jpg" alt="lala"/>
+        </div>
+    )
+}
+const Item5 = () => {
+    return (
+        <div>
+            <img src="https://media.timeout.com/images/105222673/750/422/image.jpg" alt="lala"/>
         </div>
     )
 }
@@ -31,10 +51,10 @@ const Slider = () => {
         <Carousel itemsToShow={1}>
             <Item>1</Item>
             <Item1>2</Item1>
-            <Item>3</Item>
-            <Item>4</Item>
-            <Item>5</Item>
-            <Item>6</Item>
+            <Item2>3</Item2>
+            <Item3>4</Item3>
+            <Item4>5</Item4>
+            <Item5>6</Item5>
         </Carousel>
     )
 }
