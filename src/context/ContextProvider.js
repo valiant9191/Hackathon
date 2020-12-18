@@ -10,7 +10,7 @@ const ContextProvider = (props) => {
 
     const [artists, setArtists] = useState('');
 
-    const [artist, setArtist] = useState('');
+    const [person, setPerson] = useState({});
 
     const [loading, setLoading] = useState(false);
 
@@ -30,7 +30,7 @@ const ContextProvider = (props) => {
       }, []);
   
       return (
-          <MyContext.Provider value={{ artists, setArtists, loading, setLoading }}>
+          <MyContext.Provider value={{ artists, setArtists, loading, setLoading, person, setPerson }}>
           { props.children }
           </MyContext.Provider>
       )

@@ -7,7 +7,7 @@ import { MyContext } from '../../context/ContextProvider';
 const Artists = (props) => {
     const context = useContext(MyContext);
 
-    const [person, setPerson] = useState({});
+    //const [person, setPerson] = useState({});
 
     const pickArtist = (e) => {
 
@@ -18,13 +18,11 @@ const Artists = (props) => {
             return el.id === idOfArtist
         });
 
-        setPerson(clickedArtist)
-        console.log(person)
+        context.setPerson(clickedArtist)
         props.history.push({
           pathname: '/person',
-          person
+        //   person
         })
-        console.log(props.history.location.person)
       }
     return (
         <div>
