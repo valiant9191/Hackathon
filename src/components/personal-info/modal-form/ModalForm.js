@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import './ModalForm.css'
+import StripeCheckoutButton from './payment';
 
 const ModalForm = ({ open, onClose }) => {
 
-    if (!open) return null
+    // if (!open) return null
 
     // const [isOpen, setIsOpen] = useState(false)
 
@@ -13,11 +14,11 @@ const ModalForm = ({ open, onClose }) => {
 
     return (
 
-        
-        
         <div className="modal-wrapper">
             
-            <span onClick={onClose} className="close-modal-btn">x</span>
+            <span
+             onClick={() => onClose()} 
+             className="close-modal-btn">x</span>
 
             <div className="modal-name">
                 <label 
@@ -72,15 +73,18 @@ const ModalForm = ({ open, onClose }) => {
             </div>
 
             <div className="modal-btn">
-                <button 
+                <StripeCheckoutButton price="100 dinar"/>
+                
+                {/* <button 
                     className="form-input-btn-checkout"
                     type="submit">
                     Checkout
-                </button>
+                </button> */}
                 <button 
                     className="form-input-btn-back"
                     type="submit"
-                    onClick={onClose}>
+                    onClick={() => onClose()}
+                    >
                     Back
                 </button>
             </div>

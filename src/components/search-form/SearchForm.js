@@ -99,6 +99,7 @@ const SearchForm = () => {
   }, []);
 
   return (
+
     <div>
 
       <Typography className="heading-one" variant="h3" component="h2" gutterBottom>
@@ -117,6 +118,10 @@ const SearchForm = () => {
             />
           </div>
         </form>
+
+    <div className="form_wrap">
+      <form className={classes.root} noValidate autoComplete="off">
+
         <div>
           <FormGroup className="filters-fileds" row>
 
@@ -140,6 +145,7 @@ const SearchForm = () => {
           </FormGroup>
 
         </div>
+
         <div>
           <FormControl variant="outlined" className={classes.formControl}>
             <InputLabel id="demo-simple-select-outlined-label">
@@ -163,6 +169,32 @@ const SearchForm = () => {
       </FormGroup>
 
       <div className="search-button">
+
+      </form>
+      <div className="form-btn_wrap">
+        <FormControl variant="outlined" className={classes.formControl}>
+          <InputLabel id="demo-simple-select-outlined-label">
+            Technique
+          </InputLabel>
+          <Select
+            labelId="demo-simple-select-outlined-label"
+            id="demo-simple-select-outlined"
+            value={userSelectTechnique}
+            onChange={handleSelectTechnique}
+            label="Age"
+          >
+            <MenuItem value="">
+              <em>None</em>
+            </MenuItem>
+            <MenuItem value={10}>Ten</MenuItem>
+            <MenuItem value={20}>Twenty</MenuItem>
+            <MenuItem value={30}>Thirty</MenuItem>
+          </Select>
+        </FormControl>
+      </div>
+      <div className="form-button_wrap">
+      <div className="search-btn_wrap">
+
         <Button variant="contained" color="default" onClick={handleClick}>
           Find your artist
         </Button>
@@ -171,6 +203,7 @@ const SearchForm = () => {
             Browse all
         </Button>
         </Link>
+        </div>
         <ArtistsList filteredArtists={filteredArtists} />
 
       </div>
