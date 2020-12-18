@@ -5,6 +5,7 @@ import { MyContext } from '../../context/ContextProvider';
 
 
 const Artists = () => {
+    
 
     const context = useContext(MyContext);
 
