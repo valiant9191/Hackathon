@@ -1,0 +1,25 @@
+
+
+.filters-fileds {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.inputs-fileds {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .heading-one{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
