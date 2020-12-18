@@ -21,16 +21,13 @@ const ArtistList = () => {
 
                 {context.artists && newArr.map((item, index) => {
                     return (
-
                         <ArtistCard
-                        id={item.id}
+                            id={item.id}
                             key={index}
                             name={item.name}
                             descr={item.description}
                             bio={item.biography}
-                            
                         />
-
                     )
                 })}
 
