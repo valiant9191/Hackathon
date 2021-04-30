@@ -32,7 +32,7 @@ const ArtistList = () => {
         <div>
                 <h1 className="creators">Creators of the week!</h1>
             <div className="ArtistList">
-                {context.artists && newArr.map((item, index) => {
+                {context.artists ? newArr.map((item, index) => {
                     return (
                         <ArtistCard
                         image={pics[index]}
@@ -44,7 +44,8 @@ const ArtistList = () => {
                             onClick={doSomeStuff}
                         />
                     )
-                })}
+                })
+            :<p>loading...</p>}
 
             </div>
         </div>
