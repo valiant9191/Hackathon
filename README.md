@@ -4,12 +4,12 @@
 
 This is a Hackathon peoject of 24 hours.
 We tried to help people from another time, now they can find any artist from our database and order a new fresque from Leonardo
-or a portrait of their fmaily!
+or a portrait of their family!
 
 
 
 
-# Explore hostory of Atr!
+# Explore history of Art!
 
 # Our Team
 
