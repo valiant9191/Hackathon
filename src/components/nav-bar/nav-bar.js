@@ -35,7 +35,7 @@ return(
            <nav className='Navbar'>
             <>
           <div className='logo'>
-          <i class="fas fa-palette"></i>
+          <i className="fas fa-palette"></i>
             <h4><Link to='/' className="link" style={style}>Wild Art Agency</Link></h4>
             </div>
             <ul className={renderClasses()}>

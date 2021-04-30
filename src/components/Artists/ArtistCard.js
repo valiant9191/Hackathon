@@ -39,7 +39,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ArtistCard(props) {
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
   const [isFavorite, setFavorite] = React.useState(false)
 
   let addToFav = () => {

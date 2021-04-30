@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './ModalForm.css'
 import StripeCheckoutButton from './payment';
 
-const ModalForm = ({ onClick, onClose }) => {
+const ModalForm = ({ onClose }) => {
 
     // if (!open) return null
 

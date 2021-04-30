@@ -1,5 +1,4 @@
-import axios from 'axios';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { MyContext } from '../../context/ContextProvider';
 import ButtonWrap from './buttuns';
 import PersonInfo from './person-card';
@@ -10,7 +9,6 @@ import './PersonalPage.css';
 
 import Modal from "react-modal";
 import ModalForm from './modal-form';
-import StripeCheckoutButton from './modal-form/payment';
 
 Modal.setAppElement("#root");
 

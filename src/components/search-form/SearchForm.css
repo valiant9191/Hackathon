@@ -1,10 +1,17 @@
-
+.search-container{
+  background-color: rgba(255, 255, 255, 0.7);
+  background-size: cover;
+  border-radius: 5px;
+  box-shadow: 4px 4px 19px 5px rgba(21, 42, 57, 0.2);
+  margin: 10px;
+}
 
 
 .filters-fileds {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 5px;
   }
 
 .inputs-fileds {

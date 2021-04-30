@@ -1,5 +1,5 @@
 import "./SearchForm.css";
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext } from "react";
 import { MyContext } from "../../context/ContextProvider";
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
@@ -33,8 +33,8 @@ const SearchForm = () => {
  const [userInput, setUserInput] = React.useState("");
  const [userSelectTechnique, setUserSelectTechnique] = React.useState("All");
  const [userSelectNationality, setUserSelectNationality] = React.useState("All");
- const [techniques, setTechniques] = React.useState(["All", "Glass", "Lithograph", "Textiles", "Woven", "Embroidered", "Printed"]);
- const [nationalities, setNationality] = React.useState(["All", "Italian", "French", "Dutch", "Russian"]);
+ const [techniques] = React.useState(["All", "Glass", "Lithograph", "Textiles", "Woven", "Embroidered", "Printed"]);
+ const [nationalities] = React.useState(["All", "Italian", "French", "Dutch", "Russian"]);
  const [filteredArtists, setFilteredArtists] = React.useState([]);
  const handleChange = (event) => {
    setUserInput(event.target.value);
@@ -57,14 +57,15 @@ const SearchForm = () => {
  const filterByName = (filteredArtists) => {
    return filteredArtists.filter(el => el.name.toLowerCase().includes(userInput.toLowerCase()))
  }
- const filterByTechnique = (filterArtists) => {
-   return filteredArtists.filter(el => userSelectTechnique === "All" || el.technique.includes(userSelectTechnique))
- }
+//  const filterByTechnique = (filterArtists) => {
+//    return filteredArtists.filter(el => userSelectTechnique === "All" || el.technique.includes(userSelectTechnique))
+//  }
  const filterByNationality = (filteredArtists => {
    return filteredArtists.filter(el => userSelectNationality === "All" || el.nationality === userSelectNationality)
  })
  return (
-<div >
+<div  className="search-container">
+  <div>
    <Typography className="heading-one" variant="h3" component="h2" gutterBottom>
       Find your artist!
     </Typography>
@@ -80,6 +81,7 @@ const SearchForm = () => {
          />
        </div>
      </form>
+     </div>
      <div>
         <FormGroup className="filters-fileds" row>
           <FormControl variant="outlined" className={classes.formControl}>
@@ -95,7 +97,7 @@ const SearchForm = () => {
             >
               <MenuItem value="">
               </MenuItem>
-              {techniques.map(technique => <MenuItem value={technique}>{technique}</MenuItem>)}
+              {techniques.map((technique,id) => <MenuItem key={id} value={technique}>{technique}</MenuItem>)}
             </Select>
           </FormControl>
         </FormGroup>
@@ -115,7 +117,7 @@ const SearchForm = () => {
           >
             <MenuItem value="">
             </MenuItem>
-            {nationalities.map(nationality => <MenuItem value={nationality}>{nationality}</MenuItem>)}
+            {nationalities.map((nationality,id) => <MenuItem key={id} value={nationality}>{nationality}</MenuItem>)}
           </Select>
         </FormControl>
         </FormGroup>

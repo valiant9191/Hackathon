@@ -7,7 +7,7 @@ const ArtistsList = ( {filteredArtists} ) => {
         <div>
         <div className= "ArtistList">
        
-        {filteredArtists.map((item, index)=>{
+        {filteredArtists.loading? filteredArtists.map((item, index)=>{
                 return(
                 
                     <ArtistCard
@@ -20,7 +20,9 @@ const ArtistsList = ( {filteredArtists} ) => {
                     />
                    
                 )
-            })}
+            }) :
+            <p>loading...</p>
+        }
             
             </div>
    </div>
